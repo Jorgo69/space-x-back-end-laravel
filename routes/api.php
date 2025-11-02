@@ -15,6 +15,14 @@ use App\Http\Controllers\LaunchController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+// Health check pour Docker et Render
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now()->toIso8601String(),
+        'service' => 'SpaceX API'
+    ]);
+});
 
 Route::post('/login', [AuthController::class, 'login']);
 

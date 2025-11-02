@@ -1,0 +1,54 @@
+services:
+  # Service Web API Laravel
+  - type: web
+    name: spacex-api
+    env: docker
+    plan: free
+    region: frankfurt  # ou oregon, singapore selon votre localisation
+    branch: docker/deploy
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    
+    # Configuration du healthcheck
+    healthCheckPath: /api/health
+    
+    # Variables d'environnement
+    envVars:
+      - key: APP_NAME
+        value: SpaceX API
+      
+      - key: APP_ENV
+        value: production
+      
+      - key: APP_DEBUG
+        value: false
+      
+      - key: APP_KEY
+        generateValue: true
+      
+      - key: APP_URL
+        value: https://spacex-api.onrender.com
+      
+      - key: DB_CONNECTION
+        value: sqlite
+      
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
+      
+      - key: SESSION_DRIVER
+        value: file
+      
+      - key: CACHE_DRIVER
+        value: file
+      
+      - key: QUEUE_CONNECTION
+        value: sync
+      
+      - key: LOG_LEVEL
+        value: error
+    
+    # Disque persistant pour SQLite
+    disk:
+      name: spacex-db
+      mountPath: /var/www/html/database
+      sizeGB: 1
