@@ -23,7 +23,6 @@ return [
     'allowed_origins' => [
         'http://localhost:4200',
         'http://127.0.0.1:4200',
-        'https://spacex-dashboard-front-end-angular.vercel.app/',
         'https://spacex-dashboard-front-end-angular.vercel.app'
     ],
 
