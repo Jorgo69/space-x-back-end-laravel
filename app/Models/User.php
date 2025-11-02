@@ -13,8 +13,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 class User extends Authenticatable
 {
     use HasApiTokens,
-    HasUuids,
-    SoftDeletes;
+    HasUuids;
+    // SoftDeletes
     // HasFactory,
     // Notifiable;
 

@@ -12,3 +12,5 @@ Accept: application/json
 GET http://localhost:8000/api/dashboard
 Accept: application/json
 Authorization: Bearer 1|ggwSyUMjYrTFa2XwEuxIGcf3ydbtWz9JDI4s1wUf24b07e20
+
+# 3|9dLZ3t78ZXg4VespiNfOy9hvf1zdGdHY9wYlV7cde774b9ef
