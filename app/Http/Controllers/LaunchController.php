@@ -79,7 +79,6 @@ class LaunchController extends Controller
             $launches = $launches->filter(fn($l) => ($l['success'] ?? false) === $success);
         }
 
-        // Pagination manuelle (ou utiliser paginate si tu veux vrai paginate côté Laravel)
         $perPage = $request->get('per_page', 10);
         $page = $request->get('page', 1);
         $offset = ($page - 1) * $perPage;

@@ -1,0 +1,1 @@
+Pour la documentation complete du projet et de la dockerisation referez-vous au dossier [doc] a la racine du projet [la documentation est entirement generer par IA]
